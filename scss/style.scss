@@ -1,0 +1,549 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+// Переменные для блока
+$fz:100px;
+$color_1:#000;
+$color_2:#fff;
+
+// Шаблон №1
+.tplborder{
+	font-size: 100px;
+	border-bottom: 5px dashed red;
+}
+@mixin fontz($f,$c){
+	font-size: $f;
+	color: $c;
+}
+
+.block{
+	width: 300px / 960px * 100%;
+	background-color: #666;
+	padding: 30px;
+	line-height: 60px;
+	.block__text{
+		font-size: $fz;
+		span{
+			color: green;
+		}
+	}
+}
+.link{
+	@include fontz(80px,green);
+	color: $color_1;
+	text-decoration: underline;
+	font-size: $fz;
+	.block &{
+		font-size: $fz;
+	}
+	&:hover{
+		color: $color_2;
+	}
+	@extend .tplborder;
+}
+.link-2{
+	@include fontz(50px,green);
+	border-bottom: 5px dashed #000;
+	@extend .tplborder;
+}
+
+
+body{
+	font-family: 'Poppins', sans-serif;
+	margin: 0 auto;
+}
+.container{
+	max-width: 1300px;
+	margin: 0 auto;
+	padding-left:25px;
+	padding-right: 25px;
+}
+
+
+.row{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.small-container{
+	max-width: 1080px;
+	margin:  0 auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+a{
+	color: #555;
+	text-decoration: none;
+}
+p{
+	color: #555;
+}
+.btn{
+	display: inline-block;
+	background: #ff523b;
+	color: #fff;
+	padding: 8px 30px;
+	margin: 30px 0;
+	border-radius: 30px;
+	transition: background 0.5s;
+}
+.btn:hover{
+	background: #563434;
+}
+.rating{
+	color: #ff523b;
+}
+
+ /* // header strart */
+
+
+
+.header{
+	background: radial-gradient(#fff,#ffd6d6);
+	.header .row{
+		margin-top: 70px;
+	}
+		
+.container{
+	max-width: 1300px;
+	margin: 0 auto;
+	padding-left:25px;
+	padding-right: 25px;
+	.navbar{
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		nav{
+			text-align: right;
+			flex: 1;
+		}
+		nav, ul, li {
+			display: inline-block;
+			list-style-type: none;
+			margin-right: 20px;	
+		}
+		
+	}
+	a{
+		
+		color: #555;
+		text-decoration: none;
+	}
+	p{
+		color: #555;
+	}
+
+	.row{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		.col-2{
+			flex-basis: 50%;
+			min-width: 300px;
+			
+			
+		}
+		.col-2 img {
+			max-width: 100%;
+			padding: 50px 0;
+			
+		}
+		.col-2 h1{
+		font-size: 50px;
+		line-height: 60px;
+		font-weight: 700;
+		margin: 25px 0;
+		}
+		
+	
+	}
+	.btn{
+		color: #fff;
+	}
+	.menu-icon{
+		width: 28px;
+		margin-left: 20px;
+		display: none;
+	}
+	
+}
+
+
+}
+
+
+ /* // header end */
+
+
+
+
+/* // article start */
+
+.article{
+	.categories{
+		max-width: 70px 0;
+		
+
+	}
+	.small-container{
+		max-width: 1080px;
+		margin:  0 auto;
+		padding-left: 25px;
+		padding-right: 25px;
+		.col-3{
+			flex-basis: 30%;
+			min-width: 250px;
+			margin-bottom: 30px;
+			margin-top: 30px;
+	
+		}
+		.col-3 img{
+			width: 100%;
+			
+		}
+	}
+	
+}
+
+
+/* // article end */
+.section{
+	max-width: 1080px;
+	margin:  0 auto;
+	padding-left: 25px;
+	padding-right: 25px;
+	.col-4{
+		flex-basis: 25%;
+		padding: 10px;
+		min-width: 200px;
+		margin-bottom: 50px;
+		transition: transform 0.5s;//animasiya yokaryk galma
+
+	}
+
+	.col-4:hover{
+		transform: translateY(-7px);//animasiya yokaryk galma
+	}
+	h2{
+		font-size: 24px;
+		font-weight: 600;
+	}
+	h4{
+		font-size: 16px;
+		font-weight: 600;
+		color: #555;
+
+	}
+	.col-4 img {
+		width: 100%;
+	}
+	.title{
+		text-align: center;
+		margin: 0 auto 80px;
+		position: relative;
+		line-height: 60px;
+		color: #555;
+	}
+	//gyzyl cyzyjak gurlusy
+	.title::after{
+		content: '';
+		background: #ff523b;
+		width: 80px;
+		height: 5px;
+		border-radius: 5px;
+		position: absolute;
+		
+		bottom: 0;
+		left: 46.5%;
+		transform: rotateX(-46.5%);
+	}
+	.col-4 p{
+		font-size: 14px;
+	}
+	.rating{
+		color: #ff523b;
+	}
+}
+
+/* // section strart */
+
+
+
+/* section end */
+
+
+/* aside start */
+.aside{
+
+	
+	max-width: 100%;
+	margin: 0 auto;
+	// padding-left:25px;
+	// padding-right: 25px;
+	.row{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		
+	}
+	.col-2{
+		flex-basis: 50%;
+		min-width: 300px;
+		
+		
+	}
+	h1{
+		font-size: 50px;
+		line-height: 60px;
+		font-weight: 700;
+		margin: 25px 0;
+	}
+	img{
+		max-width: 100%;
+		padding: 50px 0;
+	}
+	.offer{
+		background: radial-gradient(#fff,#ffd6d6);
+		margin-top: 80px;
+		padding: 30px 0;
+		flex: 1;
+	}
+	.col-2 .offer-img{
+		padding: 50px;
+
+	}
+	small{
+		color: #555;
+	}
+}
+
+/* aside end */
+
+
+
+/*  section_testimonial start */
+
+.section_testimonial{
+
+	.testimonial{
+		padding-top:100px ;
+
+	}
+
+	.small-container{
+		max-width: 1080px;
+		margin:  0 auto;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	
+	.row{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		
+		
+	}
+	.col-3{
+		flex-basis: 30%;
+		min-width: 250px;
+		margin-bottom: 30px;
+		margin-top: 30px;
+		h3{
+			font-size: 16px;
+			font-weight: 600;
+			margin: 12px 0;
+		}
+		
+	}
+	.testimonial .col-3{
+		text-align: center;
+		padding: 40px 20px;
+		box-shadow:  0 0 20px 0px rgba(0,0,0,0.1);
+		cursor: pointer;
+		transition: transform 0.5s;
+	}
+	.testimonial .col-3:hover{
+		transform: translateY(-10px);
+	}
+	.testimonial .col-3 img{
+		width: 50px;
+		margin-top: 20px;
+		border-radius: 50%;
+	}
+	.fa-quote-left{
+		font-size: 34px;
+		color: #ff523b;
+	}
+	.col-3 p{
+		font-size: 13px;
+		margin: 12px 0;
+		color: #777;
+
+	}
+	
+}
+
+/*  section_testimonial end */
+
+
+
+/* section brands start  */
+.section_brands{
+
+	.brands{
+		margin: 100px auto;
+		
+	}
+	
+	.col-5{
+		width: 160px;
+		.col-5, img{
+		width: 100%;
+		cursor: pointer;
+		filter: grayscale(100%)//basanda yanar yaly edya surat
+		}
+		.col-5, img:hover{
+		filter: grayscale(0);//basanda yanar yaly edya surat
+		}
+	}
+	
+	
+	
+}
+
+
+/*  section brands end */
+
+
+
+/* footer start */
+footer{
+	
+	.footer{
+	
+		background: #000;
+		color: #8a8a8a;
+		font-size: 14px;
+		padding: 60px 0 20px;
+		// min-height: 200px;
+		.container{
+			max-width: 1300px;
+			margin: 0 auto;
+			padding-left:25px;
+			padding-right: 25px;
+			
+		}
+		.row{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			// max-height: 200px;
+		}
+		
+		.footer, p{
+			color: #8a8a8a;
+		}
+		.footer, h3{
+			color: #fff;
+			margin-bottom: 20px;
+		}
+		.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+			min-width: 250px;
+			margin-bottom: 30%;
+	
+		}
+		.footer-col-1{
+			flex-basis: 30%;
+		}
+		.footer-col-2{
+			flex: 1;
+			text-align: center;
+			img{
+			width: 180px;
+			margin-bottom: 20px;
+			}
+		}
+		.footer-col-3, .footer-col-4{
+			flex-basis: 12%;
+			text-align: center;
+		}
+		ul{
+			list-style: none;
+		}
+		.app-loga{
+			cursor: pointer;
+			margin-top: 20px;
+			img{
+				width: 140px;
+			}
+	
+		}
+		hr{
+			border: none;
+			background: #b5b5b5;
+			height: 1px;
+			margin: 20px 0;
+		}
+		.copyright{
+			text-align: center;
+		}
+	
+	
+		
+	
+		
+	}
+}
+
+/* footer end */
+
+
+/* medie  start */
+/*  @media only screen and (max-width:800px)*/
+@media only screen and (max-width:800px){
+	.header .container .navbar nav ul{
+		position: absolute;
+		top: 90px;
+		left: 0;
+		background: #333;
+		width: 100%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+	}
+	.header .container .navbar nav  ul li{
+		display: block;
+		margin-right: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.header .container .navbar nav  ul li a{
+		color: #fff;
+	}
+	.header .container .navbar .menu-icon{
+		display: block;
+		cursor: pointer;
+	}
+}
+
+/*  @media only screen and (max-width:600px)*/
+@media only screen and (max-width:600px){
+	.row{
+		text-align: center;
+	}
+	.col-2, .col-3, .col-4{
+		flex-basis: 100%;
+	}
+
+}
+
+/* medie end */
+
+/*  */
+/*  */
+/*  */
